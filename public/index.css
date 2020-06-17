@@ -1,0 +1,73 @@
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap";
+
+:root{
+    --colorGren: rgb(70, 235, 98);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+body{
+    background: #282a36;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+header{
+    padding: 32px;
+    border-bottom: 1px solid #333;
+    background: rgba(0,0,0, 0.1); 
+    
+}
+.menu{
+    font-size: 20px;
+    text-align: center;
+}
+.menu a{
+    color: white;
+    line-height: 40px;
+    margin: 0 16px;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: var(--colorGren);
+    transition: 270ms;
+}
+
+#perfil{
+    text-align: center;
+    padding: 30px;
+}
+#perfil img{
+    border-radius: 50%;
+    border: 5px solid var(--colorGren);
+    height: 300px;
+    
+}
+#perfil h1{
+    font-size: 42px;
+    line-height: 52px;
+    margin-top: 30px;
+}
+#perfil h2{
+    font-size: 21px;
+    line-height: 52px;
+    margin-top: 0px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+#perfil p{
+    max-width: 500px;
+    margin: 30px auto;
+    font-size: 20px;
+    line-height: 30px; 
+}
+#links a{
+    text-decoration:underline ;
+}
+#links{
+    margin-bottom: 100px;
+}
