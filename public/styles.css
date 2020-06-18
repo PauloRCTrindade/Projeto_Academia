@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:700@300&display=swap');
 
 :root{
-    --corAmarelo:rgb(252, 239, 66);
+    --cor01:rgb(252, 239, 66);
+    --cor02: rgb(207, 76, 247);
 }
 
 *{
@@ -13,7 +14,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: var(--corAmarelo)
+    background-color: var(--cor01)
 }
 
 header{
@@ -35,18 +36,18 @@ header{
     position: relative;
 }
 .menu a.ativo {
-    color: var(--corAmarelo);
+    color: var(--cor01);
     font-weight: bold;
     
 }
 .menu a:hover{
-    color: var(--corAmarelo);
+    color: var(--cor01);
 }
     .menu a::after{
     content: "";
     width: 0%;
     height: 2px;
-    background-color: var(--corAmarelo);
+    background-color: var(--cor01);
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -57,11 +58,73 @@ header{
 }/*=====CARDS=====*/
 .card{background-color: #282a36;
     width: 800px;
-    height: 400px;
+    min-height:400px;
     margin: 45px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.4);
+/*=====Animação====*/
+animation-name: up;
+animation-duration: 700ms;
+animation-timing-function: ease-out;
 }
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+opacity: 1;
+    }
+}
+
+/*=====detalhes=====*/
+.detalhes{
+    color: white;
+    padding: 32px;
+}
+
+.detalhes .item{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 16px 0;
+}
+.detalhes .item:last-child {
+    border: none;
+}
+
+.detalhes h3,
+.detalhes .item div:nth-child(1){
+    color: #aaa;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight:normal ;
+}
+.detalhes .item div:nth-child(2){
+    color: rgb(245, 245, 245);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.detalhes h3{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--corAmarelo);
+}
+.detalhes .item span{
+    padding: 8px 16px;
+    background-color: var(--cor02);
+    border-radius: 16px;
+    color: var(--cor01);
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
 
 
 
