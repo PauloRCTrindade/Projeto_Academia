@@ -54,6 +54,13 @@ header{
     .menu a:hover::after{
     width: 100%;
     transition: width 700ms cubic-bezier(1,-0.15, 0.46, 0.88) ;
+}/*=====CARDS=====*/
+.card{background-color: #282a36;
+    width: 800px;
+    height: 400px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 
