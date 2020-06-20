@@ -1,0 +1,43 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <div class="card">
+        <section 
+            class="avatar" 
+            style="background:url{{instrutores.avatar_url}} no-repeat center center / cover">
+        </section>
+        <section class="detalhes">
+            <h3>Detalhes</h3>
+
+            <div class="item">
+                <div>Instrutor</div>
+                <div>{{instrutores.nome}}</div>
+            </div>
+
+            <div class="item">
+                <div>Idade</div>
+                <div>{{instrutores.idade}}</div>
+            </div>
+
+            <div class="item">
+                <div>Sexo</div>
+                <div>{{instrutores.genero}}</div>
+            </div>
+
+            <div class="item">
+                <div>Acompanhamento</div>
+                <div>
+
+                {% for item in nome %}
+                    <span>{{ item }}</span>
+                {% endfor %}
+
+                </div>
+            </div>
+            <div class="item">
+                <div>Desde</div>
+                <div>{{instrutores.data_inicio}}</div>
+            </div>
+        </section>
+    </div>
+{% endblock content %}
