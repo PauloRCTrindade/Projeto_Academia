@@ -2,36 +2,12 @@
   "instrutores": [
     {
       "id": 1,
-      "nome": "Rafael",
-      "nascimento": 1511841812400000,
-      "função": "asasas",
-      "data_inicio": 1592681235379
-    },
-    {
-      "id": 2,
-      "nome": "Rafael",
-      "nascimento": 320339070000000,
-      "genero": "M",
-      "função": "wewewewe",
-      "data_inicio": 1592681414045
-    },
-    {
-      "id": 3,
-      "nome": "Rafael",
-      "nascimento": 492393600000,
-      "genero": "M",
-      "função": "wewewewe",
-      "data_inicio": 1592681619261,
-      "avatar_url": "http://google.com"
-    },
-    {
-      "id": 4,
       "avatar_url": "http://google.com",
-      "nome": "Rafael",
-      "nascimento": 3762918471600000,
+      "nome": "Paulo Roberto Celestino Trindade",
+      "idade": 591062400000,
       "genero": "M",
-      "função": "lklklklklklklk",
-      "data_inicio": 1592681728331
+      "funcao": "desenvolvedor,atirador",
+      "data_inicio": 1592686701017
     }
   ]
 }
