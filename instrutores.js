@@ -1,6 +1,18 @@
 const fs = require('fs')
 const data = require('./data.json')
 
+exports.show = function(req,res){
+    const {id} = req.params
+
+    const foundInstrutores = data.instrutores.find(function(instrutores){
+        return instrutores.id == id
+    })
+
+    if (!foundInstrutores) return res.send("Instrutor não encontrado")
+
+    return res.render("instrutores/show",{instrutores: foundInstrutores})
+}
+
 exports.post =  function(req,res){
 
     const keys = Object.keys(req.body)
@@ -11,9 +23,9 @@ exports.post =  function(req,res){
         }
     }
 
-    let {avatar_url,nome,nascimento,genero,função} = req.body
+    let {avatar_url,nome,idade,genero,funcao} = req.body
 
-    nascimento = Date.parse(req.body.nascimento)
+    idade = Date.parse(req.body.idade)
     const  data_inicio = Date.now()
     const  id = Number(data.instrutores.length + 1)
 
@@ -21,9 +33,9 @@ exports.post =  function(req,res){
         id,
         avatar_url,
         nome,
-        nascimento,
+        idade,
         genero,
-        função,
+        funcao,
         data_inicio
     })
 
