@@ -5,20 +5,31 @@ exports.post =  function(req,res){
 
     const keys = Object.keys(req.body)
 
-        for(key of keys){
-            if(req.body[key] == ""){
-                return res.send("Por favor preencha todos os campos para prosseguir !!!")
-            }
+    for(key of keys){
+        if(req.body[key] == ""){
+            return res.send("Por favor preencha todos os campos para prosseguir !!!")
         }
+    }
 
-        req.body.nascimento = Date.parse(req.body.nascimento)
-        req.body.criar_data = Date.now()
+    let {avatar_url,nome,nascimento,genero,função} = req.body
 
-        data.instrutores.push(req.body)
+    nascimento = Date.parse(req.body.nascimento)
+    const  data_inicio = Date.now()
+    const  id = Number(data.instrutores.length + 1)
 
-        fs.writeFile("data.json",JSON.stringify(data,null,2),function(err){
-            if (err) return res.send('Erro ao salvar dados')
+    data.instrutores.push({
+        id,
+        avatar_url,
+        nome,
+        nascimento,
+        genero,
+        função,
+        data_inicio
+    })
 
-            return res.redirect("/instrutores/create")
-        })
+    fs.writeFile("data.json",JSON.stringify(data,null,2),function(err){
+        if (err) return res.send('Erro ao salvar dados')
+
+        return res.redirect("/instrutores/create")
+    })
 }
