@@ -21,14 +21,14 @@
 
             <div class="item">
                 <div>Sexo</div>
-                <div>{{instrutores.genero}}</div>
+                <div>{{ "Masculino" if instrutores.genero == "M" else "Feminino"}}</div>
             </div>
 
             <div class="item">
                 <div>Acompanhamento</div>
                 <div>
 
-                {% for item in nome %}
+                {% for item in instrutores.funcao %}
                     <span>{{ item }}</span>
                 {% endfor %}
 
