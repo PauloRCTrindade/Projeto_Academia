@@ -4,7 +4,8 @@
           <input 
               type="url" 
               name="avatar_url"
-              placeholder="http://">
+              placeholder="http://"
+              value="{{ instrutor.avatar_url }}">
       </div>
   </div>
 
@@ -14,7 +15,8 @@
           <input 
               type="text"
               name="nome"
-              placeholder="Digite o nome do instrutor">
+              placeholder="Digite o nome do instrutor"
+              value="{{ instrutor.nome }}">
       </div>
   </div>
 
@@ -23,18 +25,30 @@
       <div>
           <input 
               type="date" 
-              name="idade">
+              name="idade"
+              value="{{ instrutor.idade }}">
       </div>
   </div>
 
   <div class="item">
       <div>Sexo</div>
-      <div><span>
-          <input type="radio" name="genero" value="M" checked>Masculino
-          </span>
-          <span>
-          <input type="radio" name="genero" value="F">Feminino
-          </span>
+      <div>
+        <span>
+          <input type="radio" 
+          name="genero" 
+          value="M" 
+          {% if instrutor.genero == "M" %}
+          checked
+          {% endif %}>Masculino
+        </span>
+        <span>
+          <input type="radio" 
+          name="genero" 
+          value="F"
+          {% if instrutor.genero == "F" %}
+          checked
+          {% endif %}>Feminino
+        </span>
           
       </div>
   </div>
@@ -45,7 +59,8 @@
           <input 
               type="text" 
               name="funcao"
-              placeholder="Separe os serviços prestados por vírgula">
+              placeholder="Separe os serviços prestados por vírgula"
+              value="{{ instrutor.funcao }}">
       </div>
   </div>
   
