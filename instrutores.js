@@ -1,6 +1,7 @@
 const fs = require('fs')
 const data = require('./data.json')
 
+// Show
 exports.show = function(req,res){
     const {id} = req.params
 
@@ -34,6 +35,7 @@ exports.show = function(req,res){
     return res.render("instrutores/show",{instrutores})
 }
 
+// Creat
 exports.post =  function(req,res){
 
     const keys = Object.keys(req.body)
@@ -65,4 +67,17 @@ exports.post =  function(req,res){
 
         return res.redirect("/instrutores/create")
     })
+}
+
+//Edit
+exports.edit = function(req,res){
+    const {id} = req.params
+
+    const foundInstrutores = data.instrutores.find(function(instrutores){
+        return instrutores.id == id
+    })
+
+    if (!foundInstrutores) return res.send("Instrutor não encontrado")
+
+    return res.render('instrutores/edit',{ instrutor: foundInstrutores })
 }
