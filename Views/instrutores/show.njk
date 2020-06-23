@@ -3,8 +3,8 @@
 {% block content %}
     <div class="card">
         <section 
-            class="avatar" 
-            style="background:url{{instrutores.avatar_url}} no-repeat center center / cover">
+            class="avatar_url" 
+            style="background:url({{instrutores.avatar_url}}) no-repeat center center / cover">
         </section>
         <section class="detalhes">
             <h3>Detalhes</h3>
@@ -38,6 +38,9 @@
                 <div>Desde</div>
                 <div>{{instrutores.data_inicio}}</div>
             </div>
+
+            <a href="#" class="button">Editar</a>
+
         </section>
     </div>
 {% endblock content %}
