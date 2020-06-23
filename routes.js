@@ -20,6 +20,8 @@ routes.get('/instrutores/:id/edit',instrutores.edit)
 
 routes.post("/instrutores",instrutores.post)
 
+routes.put("/instrutores",instrutores.put)
+
 routes.get('/membros',function(req,res){
     return res.send('membros')
 })
