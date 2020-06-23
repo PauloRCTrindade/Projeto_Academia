@@ -28,7 +28,7 @@ exports.show = function(req,res){
         ... foundInstrutores,
         idade: age(foundInstrutores.idade),
         funcao: foundInstrutores.funcao.split(","),
-        data_inicio:"",
+        data_inicio: new Intl.DateTimeFormat('pt-BR').format(foundInstrutores.data_inicio),
     }
 
     return res.render("instrutores/show",{instrutores})
