@@ -77,7 +77,7 @@ exports.edit = function(req,res){
 // Put
 exports.put = function(req,res){
     const {id} = req.body
-    const index = 0
+    let index = 0
 
     const foundInstrutores = data.instrutores.find(function(instrutores,foundIndex){
         if(instrutores.id == id){
@@ -96,10 +96,10 @@ exports.put = function(req,res){
 
     data.instrutores[index] = instrutor
 
-    fs.writeFile("data.json",JSON.stringify(data,null,2,function(err){
+    fs.writeFile("data.json",JSON.stringify(data,null,2),function(err){
         if (err) return res.send("[ERRO]")
 
         return res.redirect(`/instrutores/${id}`)
-    }))
+    })
 
 }
