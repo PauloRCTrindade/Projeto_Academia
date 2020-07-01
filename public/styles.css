@@ -43,7 +43,7 @@ header{
 .menu a:hover{
     color: var(--cor01);
 }
-    .menu a::after{
+.menu a::after{
     content: "";
     width: 0%;
     height: 2px;
@@ -52,10 +52,11 @@ header{
     left: 0;
     bottom: -2px;
 }
-    .menu a:hover::after{
+.menu a:hover::after{
     width: 100%;
     transition: width 700ms cubic-bezier(1,-0.15, 0.46, 0.88) ;
-}/*=====CARDS=====*/
+}
+/*=====CARDS=====*/
 .card{background-color: #282a36;
     width: 800px;
     min-height:400px;
